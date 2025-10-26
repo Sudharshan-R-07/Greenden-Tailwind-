@@ -9,10 +9,10 @@
 </head>
 
 <body>
-        <nav class="bg-green-100 p-5 flex items-center justify-between shadow-xl sticky top-0 z-10">
+    <nav class="bg-green-100 p-5 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 cursor-pointer md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
@@ -29,81 +29,99 @@
         </ul>
 
     </nav>
-    <section class="text-center">
-        <h1 class="text-3xl font-bold mt-5">Our Product</h1>
-        <input type="placeholder-shown" class="border border-black mt-5 p-2 " placeholder="Search your product"
-            style="width: 60%;">
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0  transition-all duration-1000"
+        style="width: 50%; height: 100vh; right: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="cursor-pointer">X</p>
+        </div>
+        <ul class="flex-col gap-5 text-grey-600 flex items-center">
+            <li>
+                <a class="hover:text-black hover:underline" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:text-black hover:underline" href="product.html">Product</a>
+            </li>
+            <li>
+                <a class="hover:text-black hover:underline" href="Contact.html">Content</a>
+            </li>
+        </ul>
 
     </section>
-    <section class="text-center mt-10">
-        <div class="grid grid-cols-2 gap-5 mt-3 md:grid-cols-4">
-            <div>
+    <section class="text-center p-4 ">
+        <h1 class="text-3xl font-bold mt-5">Our Product</h1>
+        <input id="search" type="search" class="border border-black mt-5 p-2 outline-none "
+            placeholder="Search your product" style="width: 80%;">
+
+
+
+        <div id="product-contanier" class=" text-center grid grid-cols-2 gap-5 mt-5 md:grid-cols-4">
+            <div class="text-center">
                 <img src="./image/Rose pot.jpg" class="inline hover:shadow xl transform hover:-translate-y-2"
                     alt="Rose pot image">
                 <h1>Rose pot</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./image/jasime pot.jpg" class="inline hover:shadow xl transform hover:-translate-y-2"
                     alt="jasime pot image">
                 <h1>Jasime pot</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./image/Lily pot.jpg" class="inline hover:shadow xl transform hover:-translate-y-2"
                     alt="Lily pot image">
                 <h1>Lily pot</h1>
                 <p>$20</p>
             </div>
-             <div>
+            <div class="text-center">
                 <img src="./image/Snake plant.png" class="inline hover:shadow xl transform hover:-translate-y-2"
                     alt="Snake pot image">
                 <h1>Snake pot</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./image/Rose pot.jpg" class="inline hover:shadow xl transform hover:-translate-y-2"
                     alt="Rose pot image">
                 <h1>Rose pot</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./image/Lily pot.jpg" class="inline hover:shadow xl transform hover:-translate-y-2"
                     alt="Lily pot image">
                 <h1>Lily pot</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./image/Rose pot.jpg" class="inline hover:shadow xl transform hover:-translate-y-2"
                     alt="Rose pot image">
                 <h1>Rose pot</h1>
                 <p>$20</p>
             </div>
-             <div>
+            <div class="text-center">
                 <img src="./image/Snake plant.png" class="inline hover:shadow xl transform hover:-translate-y-2"
                     alt="Snake pot image">
                 <h1>Snake pot</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./image/jasime pot.jpg" class="inline hover:shadow xl transform hover:-translate-y-2"
                     alt="jasime pot image">
                 <h1>Jasime pot</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./image/Rose pot.jpg" class="inline hover:shadow xl transform hover:-translate-y-2"
                     alt="Rose pot image">
                 <h1>Rose pot</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./image/Lily pot.jpg" class="inline hover:shadow xl transform hover:-translate-y-2"
                     alt="Lily pot image">
                 <h1>Lily pot</h1>
                 <p>$20</p>
             </div>
-             <div>
+            <div class="text-center">
                 <img src="./image/Snake plant.png" class="inline hover:shadow xl transform hover:-translate-y-2"
                     alt="Snake pot image">
                 <h1>Snake pot</h1>
@@ -112,13 +130,14 @@
 
         </div>
     </section>
-     <section class="bg-green-100 p-4 flex flex-col gap-5 mt-5">
-            <h1 class="text-4xl font-bold">Greenden</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, mollitia! Lorem ipsum dolor sit amet
-                consectetur.
-            </p>
-            <p>@2025 Greenday.com</p>
+    <section class="bg-green-100 p-4 flex flex-col gap-5 mt-5">
+        <h1 class="text-4xl font-bold">Greenden</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, mollitia! Lorem ipsum dolor sit amet
+            consectetur.
+        </p>
+        <p>@2025 Greenday.com</p>
     </section>
+    <script src="product.js"></script>
 
 </body>
 
